@@ -1,22 +1,19 @@
-//import logo from './logo.svg';
 import './App.css';
-import Saludo from './componentes/Saludo';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import NavBar from './componentes/navbar/NavBar'
+import inicio from './componentes/paginas/Inicio'
+import Prueba from './componentes/paginas/Prueba'
+import Test from './componentes/paginas/Test'
 
-function App(props) {
 
-  const mensaje = 'mensaje desde js'
 
-  const estilos = {
-    backgroundColor: '#888',
-    padding: '20px'
-  }
+function App() {
 
   return (
-    <div className='container'>
-      <Saludo name='Gilberto' lastname='Velazquez' />
-      <h1>Prueba de App</h1>
-      <h3 style={ estilos }>{ mensaje }</h3>
-      
+    <div className="App">
+      <Router>
+        <NavBar/>
+      </Router>
     </div>
   );
 }
