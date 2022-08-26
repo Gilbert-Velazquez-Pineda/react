@@ -1,7 +1,7 @@
 import './App.css';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import NavBar from './componentes/navbar/NavBar'
-import inicio from './componentes/paginas/Inicio'
+import Inicio from './componentes/paginas/Inicio'
 import Prueba from './componentes/paginas/Prueba'
 import Test from './componentes/paginas/Test'
 
@@ -13,6 +13,11 @@ function App() {
     <div className="App">
       <Router>
         <NavBar/>
+          <Routes>
+            <Route exact path="/" element={<Inicio/>}/>
+            <Route  path="/Prueba" element={<Prueba/>}/>
+            <Route  path='/Test' element={<Test/>}/>
+          </Routes>
       </Router>
     </div>
   );
