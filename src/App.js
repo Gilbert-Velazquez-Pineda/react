@@ -4,7 +4,7 @@ import NavBar from './componentes/navbar/NavBar'
 import Inicio from './componentes/paginas/Inicio'
 import Prueba from './componentes/paginas/Prueba'
 import Test from './componentes/paginas/Test'
-
+import ItemListContainer from './componentes/navbar/ItemListContainer'
 
 
 function App() {
@@ -12,13 +12,14 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar/>
+          <NavBar/>
+          <ItemListContainer/>
           <Routes>
             <Route exact path="/" element={<Inicio/>}/>
             <Route  path="/Prueba" element={<Prueba/>}/>
             <Route  path='/Test' element={<Test/>}/>
           </Routes>
-      </Router>
+       </Router>
     </div>
   );
 }
