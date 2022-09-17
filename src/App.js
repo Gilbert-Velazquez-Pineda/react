@@ -5,6 +5,7 @@ import Inicio from './componentes/paginas/Inicio'
 import Test from './componentes/paginas/Test'
 import SwapiContainer from './componentes/swapi/SwapiContainer';
 import ItemListContainer from './componentes/navbar/ItemListContainer'
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import InputNoVowels from './componentes/InputNoVowels';
 
@@ -45,21 +46,38 @@ function App() {
   }
 
   //DOM
+=======
+import { useState } from 'react';
+
+
+
+function App() {
+
+  const [counter, setCounter] = useState (5)
+
+
+>>>>>>> c2b6d74ac1d0a8e30f5f61c04db12e3b95142eaf
   return (
     <div className="App">
       <Router>
           <NavBar/>
 
+<<<<<<< HEAD
           <InputNoVowels/>
 
+=======
+>>>>>>> c2b6d74ac1d0a8e30f5f61c04db12e3b95142eaf
           <div className='my-2'>
           <strong>Contador: {counter}</strong>
           </div>
 
+<<<<<<< HEAD
           <button onClick={handleClick} className='btn btn-primary my-4'>Click</button>
 
           {products.map(p => <div className='p-3 mb-2 bg-dark text-white'>{p}</div>)}
 
+=======
+>>>>>>> c2b6d74ac1d0a8e30f5f61c04db12e3b95142eaf
           <ItemListContainer/>
           <Routes>
             <Route exact path="/" element={<Inicio/>}/>
